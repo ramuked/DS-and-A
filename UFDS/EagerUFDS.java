@@ -10,6 +10,7 @@ public class EagerUFDS{
 		
 		for(int i = 0; i < N; i++){
 			id[i] = i;
+			size[i] = 1;
 		}
 	}
 	
