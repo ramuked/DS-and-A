@@ -33,6 +33,7 @@ public class EagerUFDS{
 		
 		int i = root(p);
 		int j = root(q);
+		if(i == j)return;
 		if(size[i] < size[j]){
 			id[i] = id[j];
 			size[j] += size[i];
