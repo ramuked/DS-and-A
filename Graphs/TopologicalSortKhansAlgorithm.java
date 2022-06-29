@@ -12,22 +12,22 @@ public class TopologicalSortKhansAlgorithm
         List<List<Integer>> adj = new ArrayList<>(); //graph with adjacency list representation
         for(int i = 0; i < n; i++)adj.add(new ArrayList<>());
         for(int i = 0; i < m; i++){
-			int a = in.nextInt();
-			int b = in.nextInt();
-			//there is an edge from vertex a to vertex b
-			adj.get(a).add(b);
-		}
+		int a = in.nextInt();
+		int b = in.nextInt();
+		//there is an edge from vertex a to vertex b
+		adj.get(a).add(b);
+	}	
+	
+	int topologicalOrder[] = topologicalSort(adj);
+	
+	if(topologicalOrder == null){
+		System.out.println("Graph is not a Directed Acyclic Graph");
+	}
+	else{
+		System.out.println("Topological Order: ");
+		for(int i : topologicalOrder)System.out.print(i+" ");
 		
-		int topologicalOrder[] = topologicalSort(adj);
-		
-		if(topologicalOrder == null){
-			System.out.println("Graph is not a Directed Acyclic Graph");
-		}
-		else{
-			System.out.println("Topological Order: ");
-			for(int i : topologicalOrder)System.out.print(i+" ");
-			
-		}
+	}
 	}
 	
 	public static int[] topologicalSort(List<List<Integer>> adj){
