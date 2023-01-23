@@ -23,7 +23,7 @@ public class EagerUFDS{
 	}
 	
 	
-	public boolean isConnnected(int p, int q){
+	public boolean isConnected(int p, int q){
 		return root(p) == root(q);
 			
 	}
